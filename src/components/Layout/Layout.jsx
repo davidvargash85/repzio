@@ -9,7 +9,7 @@ const Layout = ({ children }) => {
     <div className="app">
       <Header />
       <aside>
-        <ul>
+        <ul className="app-menu">
           <li>
             <Link to="/">Home</Link>
           </li>

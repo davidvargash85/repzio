@@ -44,3 +44,8 @@ li a:hover {
     margin: 8px;
   }
 }
+
+.app-menu {
+  position: sticky;
+  top: 0;
+}
