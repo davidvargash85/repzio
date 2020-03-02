@@ -1,3 +1,18 @@
+.product-page {
+  display: flex;
+  flex-direction: column;
+}
+
+.product-page-breadcrumb {
+  padding: 4px;
+  margin-bottom: 16px;
+}
+
+.product-page-breadcrumb .link {
+  color: dimgray;
+  padding: 0 8px;
+}
+
 .product-image {
   grid-area: image;
 }
@@ -6,14 +21,11 @@
   grid-area: info;
 }
 
-.product-page {
+article {
   display: grid;
   grid-gap: 1em;
-  background-color: white;
-  padding: 8px;
   grid-template-areas:
-    "image"
-    "info";
+    "image info";
 }
 
 .product-info > h1 {
