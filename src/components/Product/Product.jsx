@@ -4,6 +4,8 @@ import Image from '../Image'
 
 import "./product.css";
 
+const getDescription = d => d.length > 150 ? (`${d.substring(0, 100)}...`) : d;
+
 const Product = ({ name, description, dimensions, basePrice, imageUrl }) => {
   const dimensionsUrl = `${imageUrl}?width=150&height=150`;
   return (
@@ -13,7 +15,7 @@ const Product = ({ name, description, dimensions, basePrice, imageUrl }) => {
         <Image src={dimensionsUrl} alt="Product" />
       </div>
       <div>
-        <p className="product-description">{description}</p>
+        <p className="product-description">{getDescription(description)}</p>
         <div className="product-dimensions">{`Dimensions: ${dimensions}`}</div>
         <div className="product-base-price">{basePrice}</div>
       </div>
