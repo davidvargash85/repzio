@@ -1,5 +1,5 @@
 import React from "react";
-import Layout from "./hoc/Layout/Layout";
+import Layout from "./components/Layout";
 import ProductList from "./components/ProductList";
 import ProductPage from "./components/ProductPage";
 import Home from "./components/Home";
