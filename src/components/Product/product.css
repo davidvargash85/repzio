@@ -1,0 +1,39 @@
+.product {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  background-color: white;
+  margin: 4px;
+  padding: 8px;
+  cursor: pointer;
+  color: #333;
+  text-decoration: none;
+}
+
+.product-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 8px;
+}
+
+.product-title {
+  color: #333;
+  text-decoration: none;
+  transition: all ease-in-out 0.2s;
+  margin-bottom: 16px;
+}
+
+.product-title:hover {
+  color: #ac1341;
+}
+
+.product-description {
+    margin-bottom: 16px;
+}
+
+@media screen and (max-width: 600px) {
+  .product {
+    width: 300px;
+  }
+}

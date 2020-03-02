@@ -1,0 +1,44 @@
+.product-image {
+  grid-area: image;
+}
+
+.product-info {
+  grid-area: info;
+}
+
+.product-page {
+  display: grid;
+  grid-gap: 1em;
+  background-color: white;
+  padding: 8px;
+  grid-template-areas:
+    "image"
+    "info";
+}
+
+.product-info > h1 {
+  font-size: 3em;
+}
+
+.product-price {
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  font-size: 2em;
+  margin-bottom: 16px;
+}
+
+@media only screen and (min-width: 500px) {
+  .product-page {
+    grid-template-areas:
+      "image info"
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .product-page {
+    grid-template-areas:
+      "image"
+      "info"
+  }
+}
+
