@@ -25,7 +25,7 @@ article {
   display: grid;
   grid-gap: 1em;
   grid-template-areas:
-    "image info";
+    "image info"; 
 }
 
 .product-info > h1 {
@@ -40,17 +40,21 @@ article {
 }
 
 @media only screen and (min-width: 500px) {
-  .product-page {
+  article {
     grid-template-areas:
       "image info"
   }
 }
 
 @media only screen and (max-width: 500px) {
-  .product-page {
+  article {
     grid-template-areas:
       "image"
       "info"
+  }
+
+  .product-page-breadcrumb {
+    display: none;
   }
 }
 
