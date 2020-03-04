@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/repzio/static/css/main.890d2e24.chunk.css",
+    "main.js": "/repzio/static/js/main.a1679d3b.chunk.js",
+    "main.js.map": "/repzio/static/js/main.a1679d3b.chunk.js.map",
+    "runtime-main.js": "/repzio/static/js/runtime-main.1fd842c4.js",
+    "runtime-main.js.map": "/repzio/static/js/runtime-main.1fd842c4.js.map",
+    "static/js/2.d2982ce9.chunk.js": "/repzio/static/js/2.d2982ce9.chunk.js",
+    "static/js/2.d2982ce9.chunk.js.map": "/repzio/static/js/2.d2982ce9.chunk.js.map",
+    "index.html": "/repzio/index.html",
+    "precache-manifest.ea9634c7ca30e6a4e25f05d4ee5b04a0.js": "/repzio/precache-manifest.ea9634c7ca30e6a4e25f05d4ee5b04a0.js",
+    "service-worker.js": "/repzio/service-worker.js",
+    "static/css/main.890d2e24.chunk.css.map": "/repzio/static/css/main.890d2e24.chunk.css.map",
+    "static/js/2.d2982ce9.chunk.js.LICENSE.txt": "/repzio/static/js/2.d2982ce9.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.1fd842c4.js",
+    "static/js/2.d2982ce9.chunk.js",
+    "static/css/main.890d2e24.chunk.css",
+    "static/js/main.a1679d3b.chunk.js"
+  ]
+}
