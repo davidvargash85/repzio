@@ -36,7 +36,7 @@ const ProductList = () => {
           return (
             <Link
               key={ProductID}
-              to={`/products/${ProductID}`}
+              to={`/repzio/products/${ProductID}`}
               style={{ textDecoration: "none" }}
             >
               <Product

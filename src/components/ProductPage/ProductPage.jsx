@@ -26,11 +26,11 @@ const ProductPage = ({ match }) => {
     return (
       <div className="product-page">
         <div className="product-page-breadcrumb">
-          <Link to="/" 
+          <Link to="/repzio/" 
               style={{ textDecoration: "none" }}
               className="link"
               >Home</Link>/
-          <Link to="/products"
+          <Link to="/repzio/products"
               className="link"
               style={{ textDecoration: "none" }}
               >Products</Link>

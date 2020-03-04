@@ -5,20 +5,20 @@ import Image from "../Image";
 import dataService from "../../services/dataService";
 
 const Home = () => {
-  const [company, setCompany] = useState('');
-  const [city, setCity] = useState('');
-  const [firstName, setFirstName] = useState('');
-  const [lastName, setLastName] = useState('');
-  const [email, setEmail] = useState('');
-  const [zipCode, setZipCode] = useState('');
-  const [phone, setPhone] = useState('');
-  const [state, setState] = useState('');
+  const [company, setCompany] = useState("");
+  const [city, setCity] = useState("");
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [zipCode, setZipCode] = useState("");
+  const [phone, setPhone] = useState("");
+  const [state, setState] = useState("");
 
   useEffect(() => {
     dataService.getCompanyInfo(setCompany);
   }, []);
 
-  const setSalesRepInfo = (salesRep) => {
+  const setSalesRepInfo = salesRep => {
     const {
       FirstName,
       LastName,
@@ -35,7 +35,7 @@ const Home = () => {
     setZipCode(PostalCode);
     setPhone(Phone);
     setState(State);
-  }
+  };
 
   useEffect(() => {
     dataService.getSalesRepInfo(setSalesRepInfo);
@@ -46,11 +46,13 @@ const Home = () => {
   return (
     <div className="home">
       <div className="box welcome">
-        <Image
-          src="http://images.repzio.com/productimages/772/logo772_lg.jpg?width=150&height=150"
-          alt="logo"
-          className="logo"
-        />
+        <Link to="/repzio/">
+          <Image
+            src="http://images.repzio.com/productimages/772/logo772_lg.jpg?width=150&height=150"
+            alt="logo"
+            className="logo"
+          />
+        </Link>
         <div>
           <h1>{CompanyName}</h1>
         </div>
@@ -66,7 +68,7 @@ const Home = () => {
           </p>
         </section>
         <div className="inventory-link">
-          <Link to="/products">Check our inventory</Link>
+          <Link to="/repzio/products">Check our inventory</Link>
         </div>
       </div>
       <div className="box contact-info">

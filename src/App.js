@@ -11,9 +11,9 @@ function App() {
   return (
     <Layout>
       <Switch>
-        <Route path="/" exact component={Home} />
-        <Route path="/products" exact component={ProductList} />
-        <Route path="/products/:productId" component={ProductPage} />
+        <Route path="/repzio/" exact component={Home} />
+        <Route path="/repzio/products" exact component={ProductList} />
+        <Route path="/repzio/products/:productId" component={ProductPage} />
       </Switch>
     </Layout>
   );

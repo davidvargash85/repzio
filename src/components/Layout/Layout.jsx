@@ -11,10 +11,10 @@ const Layout = ({ children }) => {
       <aside>
         <ul className="app-menu">
           <li>
-            <Link to="/">Home</Link>
+            <Link to="/repzio">Home</Link>
           </li>
           <li>
-            <Link to="/products">Products</Link>
+            <Link to="/repzio/products">Products</Link>
           </li>
         </ul>
       </aside>
