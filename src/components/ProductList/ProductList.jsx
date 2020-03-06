@@ -13,43 +13,38 @@ const ProductList = () => {
     dataService.getProducts(setProducts);
   }, []);
 
-  useEffect(() => {
-    const f = (x) => (x);
-    dataService.getProductsById('a', f);
-  }, []);
+  // useEffect(() => {
+  //   const f = x => x;
+  //   dataService.getProductsById("a", f);
+  // }, []);
 
   return (
-    <div className="products-wraper">
-      <header>
-        <h1>Storage, crates and cubes</h1>
-      </header>
-      <div className="products-list">
-        {products.map(product => {
-          const {
-            Dimensions,
-            Description,
-            ItemName,
-            BasePrice,
-            PhotoName,
-            ProductID
-          } = product;
-          return (
-            <Link
-              key={ProductID}
-              to={`/repzio/products/${ProductID}`}
-              style={{ textDecoration: "none" }}
-            >
-              <Product
-                name={ItemName}
-                description={Description}
-                dimensions={Dimensions}
-                price={BasePrice}
-                imageUrl={PhotoName}
-              />
-            </Link>
-          );
-        })}
-      </div>
+    <div className="products-list">
+      {products.map(product => {
+        const {
+          Dimensions,
+          Description,
+          ItemName,
+          BasePrice,
+          PhotoName,
+          ProductID
+        } = product;
+        return (
+          <Link
+            key={ProductID}
+            to={`/products/${ProductID}`}
+            style={{ textDecoration: "none" }}
+          >
+            <Product
+              name={ItemName}
+              description={Description}
+              dimensions={Dimensions}
+              price={BasePrice}
+              imageUrl={PhotoName}
+            />
+          </Link>
+        );
+      })}
     </div>
   );
 };

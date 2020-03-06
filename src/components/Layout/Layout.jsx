@@ -1,6 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import Header from '../../components/Header'
+import Footer from '../../components/Footer'
 
 import "./Layout.css";
 
@@ -8,17 +8,8 @@ const Layout = ({ children }) => {
   return (
     <div className="app">
       <Header />
-      <aside>
-        <ul className="app-menu">
-          <li>
-            <Link to="/repzio">Home</Link>
-          </li>
-          <li>
-            <Link to="/repzio/products">Products</Link>
-          </li>
-        </ul>
-      </aside>
       <main className="main-container">{children}</main>
+      <Footer />
     </div>
   );
 };

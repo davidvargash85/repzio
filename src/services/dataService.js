@@ -7,9 +7,10 @@ const dataService = () => {
   };
 
   const getCompanyInfo = callback => {
-    const { CompanyName } = data;
+    const { CompanyName, Message } = data;
     const result = {
-      CompanyName
+      CompanyName,
+      Message
     };
     callback(result);
   };
@@ -23,13 +24,15 @@ const dataService = () => {
       Phone,
       City,
       State,
-      PostalCode
+      PostalCode,
+      CellPhone
     } = SalesRep;
     const result = {
       FirstName,
       LastName,
       EmailAddress,
       Phone,
+      CellPhone,
       City,
       State,
       PostalCode

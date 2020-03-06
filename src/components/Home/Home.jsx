@@ -1,86 +1,42 @@
-import React, { useEffect, useState } from "react";
-import "./Home.css";
-import { Link } from "react-router-dom";
-import Image from "../Image";
+import React, { useState, useEffect } from "react";
 import dataService from "../../services/dataService";
+import DOMPurify from 'dompurify'
+import ProductList from "../ProductList";
+
+import "./Home.css";
+
+const displayName = 'home';
 
 const Home = () => {
-  const [company, setCompany] = useState("");
-  const [city, setCity] = useState("");
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
-  const [email, setEmail] = useState("");
-  const [zipCode, setZipCode] = useState("");
-  const [phone, setPhone] = useState("");
-  const [state, setState] = useState("");
+  const [title, setTitle] = useState('');
+  const [message, setMessage] = useState('');
 
-  useEffect(() => {
-    dataService.getCompanyInfo(setCompany);
-  }, []);
-
-  const setSalesRepInfo = salesRep => {
-    const {
-      FirstName,
-      LastName,
-      EmailAddress,
-      Phone,
-      City,
-      State,
-      PostalCode
-    } = salesRep;
-    setCity(City);
-    setFirstName(FirstName);
-    setLastName(LastName);
-    setEmail(EmailAddress);
-    setZipCode(PostalCode);
-    setPhone(Phone);
-    setState(State);
+  const setCompanyInfo = ({
+    CompanyName,
+    Message
+  }) => {
+    setTitle(CompanyName);
+    setMessage(Message);
   };
 
   useEffect(() => {
-    dataService.getSalesRepInfo(setSalesRepInfo);
+    dataService.getCompanyInfo(setCompanyInfo);
   }, []);
 
-  const { CompanyName } = company;
+  useEffect(() => {
+    const f = (x) => (x);
+    dataService.getProductsById('a', f);
+  }, []);
 
   return (
-    <div className="home">
-      <div className="box welcome">
-        <Link to="/repzio/">
-          <Image
-            src="http://images.repzio.com/productimages/772/logo772_lg.jpg?width=150&height=150"
-            alt="logo"
-            className="logo"
-          />
-        </Link>
-        <div>
-          <h1>{CompanyName}</h1>
-        </div>
-        <section>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
-          </p>
-        </section>
-        <div className="inventory-link">
-          <Link to="/repzio/products">Check our inventory</Link>
-        </div>
-      </div>
-      <div className="box contact-info">
-        <h3>Contact Info</h3>
-        <address className="vcard">
-          <div className="name">{`${firstName} ${lastName}`}</div>
-          <div className="sales-rep">{email}</div>
-          <div className="locality">{`${city}, ${state}`}</div>
-          <div className="postal-code">{zipCode}</div>
-          <div className="tel">Tel: {phone}</div>
-        </address>
-      </div>
+    <div className={displayName}>
+      <header className={`${displayName}-company-name`}>
+        <h1>{title}</h1>
+      </header>
+      <div className={`${displayName}-title-separator`} />
+      <div className={`${displayName}-message`}
+       dangerouslySetInnerHTML={{__html: DOMPurify.sanitize(message)}} />
+      <ProductList />
     </div>
   );
 };
