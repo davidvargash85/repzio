@@ -1,5 +1,28 @@
-.app-header {
+.main-header {
+  background-color: white;
   padding: 8px;
-  padding-left: 16px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.16);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 }
 
+.main-header div {
+  margin: 0 8px;
+}
+
+.main-header-sales-rep {
+  color: #615d5d;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+@media screen and (max-width: 600px) {
+  .main-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
