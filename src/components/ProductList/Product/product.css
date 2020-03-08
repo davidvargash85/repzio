@@ -1,0 +1,41 @@
+.product {
+  padding: 0.25rem 0.25rem 1rem;
+}
+
+.product-outer-image {
+  padding: 24px;
+  background-color: white;
+  box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.2);
+}
+
+.product-image {
+  line-height: 0;
+  position: relative;
+  padding-bottom: 100%;
+  background: lightgray;
+  overflow: hidden;
+}
+
+.product-image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 105%;
+  margin: -5px;
+}
+
+.product-title {
+  padding-top: 1rem;
+  font-weight: 600;
+}
+
+.product-title a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.product-price {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: gray;
+}
